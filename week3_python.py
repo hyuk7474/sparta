@@ -15,3 +15,53 @@ print(a_dict)
 
 people = [{'name' : 'bob', 'age' : 24}, {'name' : 'je', 'age' : 31}]
 print(people[0]['age'])
+
+def make_card(image):
+    # 파이썬은 들여쓰기를 강제! 대신 {}를 쓰지 않는다.
+    print(image)
+
+make_card('hello')
+
+
+# 조건문
+def oddeven(num):
+    if num % 2 == 0: # if 다음에 () 없음 : 들여쓰기로 구분
+        return True
+    else:
+        return False
+
+print(oddeven(10))
+
+# 반복문
+fruits = ['사과', '배', '감', '귤']
+
+# for (let i = 0; i <fruits.length; i ++) {
+#     console.log(fruits[i])
+# }
+
+for fruit in fruits: # fruits 에서 하나씩 꺼대나가 fruit에 저장해서 쓴다.
+    print(fruit)
+
+fruits = ['사과','배','배','감','수박','귤','딸기','사과','배','수박']
+
+count = 0 # 사과 개수 저장하는 변수
+for fruit in fruits:
+	if fruit == '사과':
+		count += 1
+
+print(count)
+
+
+
+people = [{'name': 'bob', 'age': 20}, 
+          {'name': 'carry', 'age': 38},
+          {'name': 'john', 'age': 7}]
+
+def get_age(myname):
+    # myname에 들어온 이름의 나이를 출력하는 함수
+    for person in people:
+        # people 리스트를 하나씩 person에 담아둠
+     if person['name'] == myname:
+        print(person['age'])
+
+get_age('carry')
