@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=East+Sea+Dokdo&family=Yeon+Sung&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문하기</title>
+</head>
+<style>
+    .product_img {
+        margin: 100px 100px auto;
+    }
+
+    .order_form {
+        margin: 50px 100px auto;
+        font-family: 'Black Han Sans', sans-serif;;
+    }
+
+    .order_button {
+        margin-left: 190px;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        background-color: rgb(141, 129, 160);
+    }
+
+    .product_title div {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .product_title {
+        margin-left: 90px;
+        margin-top: 30px;
+        font-family: 'East Sea Dokdo', cursive;
+    }
+
+    .product_info {
+        margin-left: 100px;
+        margin-top: 30px;
+        font-family: 'Yeon Sung', cursive;
+    }
+
+    .name1 div {
+        display: inline-block;
+        margin-right: 15px;
+    }
+
+    .amount1 div {
+        display: inline-block;
+        margin-right: 60px;
+        margin-top: 25px;
+    }
+
+    .adress1 div {
+        display: inline-block;
+        margin-right: 60px;
+        margin-top: 25px;
+    }
+
+    .phone_number1 div {
+        display: inline-block;
+        margin-right: 34px;
+        margin-top: 25px;
+    }
+</style>
+
+<script>
+    function hey() {
+        alert('주문이 완료되었습니다.');
+    }
+</script>
+
+<body>
+    <div class="wrap">
+        <div class="product_img"><img src='https://image.yes24.com/images/00_Event/2019/0405Soundup/img001.png'
+                width="450" height="500"></div>
+        <div class="product_title">
+            <div class="div1">
+                <h2>크레마 사운드 업</h2>
+            </div>
+            <div class="div2">190,000원</div>
+        </div>
+        <div class="product_info">
+            독서가 즐거워지다!<br>
+            CREMA Sound<br>
+            선명한 카르타 패널, 얇고 가벼운 디자인, 페이지 넘김 버튼, TTS<br>
+            여기에 BT리모콘까지 사용이 가능해진 보다 완벽한 독서
+        </div>
+        <div class="order_form">
+
+            <div class="name1">
+                <div class="div1">
+                    <label for="name1">주문자 성함 : </label>
+                </div>
+                <div class="div2"><input type="text" id="name1">
+                </div>
+            </div>
+            <div class="amount1">
+                <div class="div1">
+                    <label for="amount1">수량 : </label>
+                </div>
+                <div class="div2">
+                    <select type="text" id="amount1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="adress1">
+                <div class="div1">
+                    <label for="adress1">주소 : </label>
+                </div>
+                <div class="div2"><input type="text" id="adress1">
+                </div>
+            </div>
+            <div class="phone_number1">
+                <div class="div1">
+                    <label for="phone_number1">전화번호 :</label>
+                </div>
+                <div class="div2"><input type="text" id="phone_number1">
+                </div>
+            </div>
+            <div>
+                <button onclick="hey()" class="order_button">주문하기</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+for (let i = 0; i < bikes.length; i++) {
+
+let bikes = bikes[i]
+let count = bikes['parkingBikeTotCnt']
+    if (count <= 5){
+
+        console.log(bikes['stationName'])  } 
+else { } }
+
+for (let i = 0; i < bike.length; i++) {
+ if (bikes[i]['shared'] < 30) {
+ console.log(bikes[i]['stationId']) }
