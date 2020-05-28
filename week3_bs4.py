@@ -16,3 +16,7 @@ soup = BeautifulSoup(data.text, 'html.parser')
 #############################
 # (입맛에 맞게 코딩)
 #############################
+
+def add(num1, num2):
+    add(1, 2)
+    add(num2 = 3, num1 = 4)
