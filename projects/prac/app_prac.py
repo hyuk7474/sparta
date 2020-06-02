@@ -8,8 +8,11 @@ def prac1():
 
 @app.route('/json')
 def json_data():
+    
     person = [{'name': 'joeun', 'age': 39, 'hobby': 'climbing'}, {'name': 'Inhyuk', 'age': 31, 'hobby': 'climbing'}]
-    return jsonify(person)
+    animal = [{'name': 'goul', 'species': 'cat', 'age': 9}, {'name': 'hodu', 'species': 'cat', 'age': 3}]
+    info = person, animal
+    return jsonify(info)
 
 
 
