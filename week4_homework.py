@@ -26,8 +26,7 @@ for music in musics:
 
     print = {
         'rank' = rank_text,
-        
-    
-
-    }
+        'title' = title_text,
+        'singer' = singer_text,
+        }
 
