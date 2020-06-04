@@ -15,18 +15,19 @@ soup = BeautifulSoup(data.text, 'html.parser')
 
 musics = soup.select('#body-content > div.newest-list > div > table > tbody > tr.list')
 
+# print(musics)
+
 for music in musics:
-    rank_tag = ('td.number')
-    title_tag = ('td.info > a.title.ellipsis')
-    singer_tag = music('td.info > a.artist.ellipsis')
+    
+    rank_tag = music.select_one('td.number')
+    title_tag = music.select_one('td.info > a.title.ellipsis')
+    singer_tag = music.select_one('td.info > a.artist.ellipsis')
 
-    rank_text = rank_tag.text
-    title_text = title_tag.text
-    singer_text = singer_tag.text
+    rank = rank_tag.text
+    title = title_tag.text
+    singer = singer_tag.text
 
-    print = {
-        'rank' = rank_text,
-        'title' = title_text,
-        'singer' = singer_text,
-        }
+    print(rank, title, singer)
+# print(rank)
 
+    
