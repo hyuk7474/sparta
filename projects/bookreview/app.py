@@ -33,7 +33,12 @@ def write_review():
 
 @app.route('/reviews', methods=['GET'])
 def read_reviews():
-    return jsonify({'result':'success', 'msg': '이 요청은 GET!'})
+    reviews = list( # list 함수 - mongodb의 결과들(도큐먼트들)을 리스트로 변환
+        # {} - 검색 조건(비어있으니 모두 다 가져옴)
+        # {'-id': 0} - _id 정보는 필요없으니 가져오지 않겠다.
+        db.reviews.find({}, {'_id': 0})
+    )
+    return jsonify({'result':'success', 'reviews': reviews})
 
 
 if __name__ == '__main__':
