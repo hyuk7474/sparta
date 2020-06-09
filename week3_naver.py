@@ -64,18 +64,18 @@ for movie in movies: # 여러 개의 tr 태그를 순서대로 순회
         rank = rank_tag['alt']
         text = a_tag.text #태그의 값을 가져옴 <a>(값)</a>
         point = point_tag.text
-        print(point_tag)
+        
      
         # print(int(rank), text, point)
-        # document = {
-        #     'rank': int(rank),
-        #     'title': text,
-        #     'point': point,
-        # }
+        document = {
+            'rank': int(rank),
+            'title': text,
+            'point': point,
+        }
         # if db.user.document['title'] is '매트릭스':
         # return print(db.user.document['point'])
-# target_movie = db.user.document.find_one({'title': '매트릭스'})
-# print(target_movie)['point']
+target_movie = db.user.document.find_one({'title': '매트릭스'})
+print(target_movie)['point']
 
 
         # db.users.insert_one(document)
