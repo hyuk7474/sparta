@@ -20,14 +20,17 @@ musics = soup.select('#body-content > div.newest-list > div > table > tbody > tr
 for music in musics:
     
     rank_tag = music.select_one('td.number')
+    redundant_tag = music.select_one('td.number > span')
     title_tag = music.select_one('td.info > a.title.ellipsis')
     singer_tag = music.select_one('td.info > a.artist.ellipsis')
 
     rank = rank_tag.text
+    redundant = redundant_tag.text.split()
+    rank_text = rank.replace(redundant, '').split
     title = title_tag.text
     singer = singer_tag.text
 
-    print(rank, title, singer)
+    print(rank_text, title, singer)
 # print(rank)
 
     
